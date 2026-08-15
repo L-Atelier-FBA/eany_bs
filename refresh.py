@@ -129,7 +129,7 @@ async def eany_scraper():
 
     async with Requester(proxy=os.getenv("PROXY"), cookie=cookies) as session:
         auth_resp = await session.fetch_get("https://eany.io/api/auth/session")
-        print(auth_resp.text)
+        print(f"AUTH:{auth_resp.text}")
         auth_token = json.loads(auth_resp.text)["token"]
 
     current_index = load_state()
