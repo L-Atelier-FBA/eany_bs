@@ -154,5 +154,5 @@ async def eany_scraper():
     save_state((current_index + 1) % len(CATEGORIES))
     logger.info(f"Scraping complete. Saved {len(product_data)} products.")
 
-if __name__ == "__main__":
-    asyncio.run(eany_scraper())
+#if __name__ == "__main__":
+#    asyncio.run(eany_scraper())
